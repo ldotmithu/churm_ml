@@ -1,0 +1,12 @@
+arifacts_root: arifacts
+
+data_ingestion:
+  root_dir: arifacts/data_ingestion
+  URL: https://github.com/ldotmithu/Dataset/raw/main/bank-customer-churn-prediction.zip
+  local_data_path: arifacts/data_ingestion/data.zip
+  unzip_dir: arifacts/data_ingestion
+  
+data_transfomation:
+  root_dir : arifacts/data_transfomation
+  data_path: arifacts\data_ingestion\Churn_Modelling.csv
+
