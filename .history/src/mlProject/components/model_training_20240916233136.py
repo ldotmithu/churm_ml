@@ -33,7 +33,7 @@ class ModelTrain:
                 ])
             cat_pipeline=Pipeline([
                     ('imputer',SimpleImputer(strategy='most_frequent')),
-                    ('one',OrdinalEncoder())
+                    ('one',OneHotEncoder())
                 ])                      
             preprocess=ColumnTransformer([
                     ('num_pipeline',num_pipeline,num_col),

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction</title>
+</head>
+<body>
+    <h1>Customer Churn Prediction</h1>
+    
+    <form action="/predict" method="POST">
+        <label for="credit_score">Credit Score:</label>
+        <input type="number" step="0.01" id="credit_score" name="credit_score" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" step="0.01" id="age" name="age" required><br>
+
+        <label for="balance">Balance:</label>
+        <input type="number" step="0.01" id="balance" name="balance" required><br>
+
+        <label for="estimated_salary">Estimated Salary:</label>
+        <input type="number" step="0.01" id="estimated_salary" name="estimated_salary" required><br>
+
+        <label for="tenure">Tenure:</label>
+        <input type="number" id="tenure" name="tenure" required><br>
+
+        <label for="num_of_products">Number of Products:</label>
+        <input type="number" id="num_of_products" name="num_of_products" required><br>
+
+        <label for="has_cr_card">Has Credit Card (1 or 0):</label>
+        <input type="number" id="has_cr_card" name="has_cr_card" required><br>
+
+        <label for="is_active_member">Is Active Member (1 or 0):</label>
+        <input type="number" id="is_active_member" name="is_active_member" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>

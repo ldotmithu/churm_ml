@@ -4,8 +4,8 @@ import joblib
 from pathlib import Path
 
 # Load the trained model and preprocessor
-model = joblib.load(Path('arifacts\model_training\model.joblib'))
-churn_preprocess = joblib.load(Path('arifacts\model_training\preprocess.pkl'))
+model = joblib.load(Path('artifacts/model_training/model.joblib'))
+churn_preprocess = joblib.load(Path('artifacts/model_training/preprocess.pkl'))
 
 # Create the Streamlit UI with tabs
 st.title("Churn Prediction Using Machine Learning")

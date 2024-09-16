@@ -1,0 +1,27 @@
+arifacts_root: arifacts
+
+data_ingestion:
+  root_dir: arifacts/data_ingestion
+  URL: https://github.com/ldotmithu/Dataset/raw/main/bank-customer-churn-prediction.zip
+  local_data_path: arifacts/data_ingestion/data.zip
+  unzip_dir: arifacts/data_ingestion
+  
+data_transfomation:
+  root_dir : arifacts/data_transfomation
+  data_path: arifacts\data_ingestion\Churn_Modelling.csv
+
+model_training:
+  root_dir: arifacts/model_training
+  train_data_path: arifacts/data_transfomation/train.csv
+  test_data_path: arifacts/data_transfomation/test.csv
+  model_name: model.joblib
+  preprocess_path: arifacts/model_training/preprocess.joblib
+
+model_evaluation: 
+  root_dir: arifacts/model_evaluation
+  test_data_path: arifacts/data_transfomation/test.csv
+  model_path: arifacts/model_training/model.joblib
+  preprocess_path: arifacts/model_training/preprocess.pkl
+  metrics_file_path: arifacts/model_evaluation/metrics.json
+
+

@@ -72,7 +72,9 @@ class ModelTrain:
         
         joblib.dump(knn,os.path.join(self.config.root_dir,self.config.model_name))
         
-        save_object(file_path=self.config.preprocess_path, obj=preprocess_obj)
+        joblib.dump(preprocess_obj, os.path.join(self.config.root_dir, self.config.preprocess_path))
+        
+        logging.info(X_train.columns)
         
         
         

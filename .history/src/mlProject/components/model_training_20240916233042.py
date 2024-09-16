@@ -1,7 +1,7 @@
 from mlProject import logging
 from mlProject.utils.common import *
 from mlProject.config.configuration import *
-from sklearn.preprocessing import StandardScaler,OneHotEncoder,OrdinalEncoder
+from sklearn.preprocessing import StandardScaler,OneHotEncoder
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
@@ -33,7 +33,7 @@ class ModelTrain:
                 ])
             cat_pipeline=Pipeline([
                     ('imputer',SimpleImputer(strategy='most_frequent')),
-                    ('one',OrdinalEncoder())
+                    ('one',OneHotEncoder())
                 ])                      
             preprocess=ColumnTransformer([
                     ('num_pipeline',num_pipeline,num_col),
