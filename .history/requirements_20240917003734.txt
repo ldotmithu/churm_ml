@@ -1,0 +1,6 @@
+pamdas
+numpy
+joblib
+pathlib
+streamlit
+streamlit-option-menu
